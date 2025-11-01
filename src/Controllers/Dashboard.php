@@ -11,6 +11,6 @@ class Dashboard extends Controller
         $data = [
             'user' => session('adminUser')
         ];
-        return view('admin/dashboard', $data);
+        return view('admin/pages/dashboard', $data);
     }
 }

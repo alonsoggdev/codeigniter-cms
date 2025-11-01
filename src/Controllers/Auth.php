@@ -15,7 +15,7 @@ class Auth extends Controller
 
         if ($session->get('isAdminLoggedIn')) {
             log_message('debug', 'Usuario ya logueado, redirigiendo a dashboard');
-            return redirect()->to('/admin/dashboard');
+            return redirect()->to('/admin/pages/dashboard');
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -39,7 +39,7 @@ class Auth extends Controller
                 ]);
 
                 
-                $redirect = $session->get('redirect_after_login') ?? '/admin/dashboard';
+                $redirect = $session->get('redirect_after_login') ?? '/admin/pages/dashboard';
                 $session->remove('redirect_after_login');
                 
                 log_message('debug', 'Login correcto para usuario '.$username);
@@ -53,7 +53,7 @@ class Auth extends Controller
             log_message('debug', 'Request method should be POST instead of '.$this->request->getMethod());
         }
         
-        echo view('admin/login');
+        echo view('admin/pages/login');
     }
 
     public function logout()
@@ -61,6 +61,6 @@ class Auth extends Controller
         $session = session();
         $session->remove(['isAdminLoggedIn', 'adminUser']);
         $session->destroy();
-        return redirect()->to('/admin/login');
+        return redirect()->to('/admin/pages/login');
     }
 }
