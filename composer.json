@@ -20,5 +20,12 @@
     "files": [
       "Config/Routes.php"
     ]
+  },
+  "extra": {
+    "codeigniter4": {
+      "discover": [
+        "Modules\\CMS"
+      ]
+    }
   }
 }
