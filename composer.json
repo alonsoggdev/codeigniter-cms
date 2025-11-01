@@ -1,0 +1,9 @@
+{
+  "name": "alonsoggdev/codeigniter-cms",
+  "description": "Módulo CMS para CodeIgniter 4",
+  "autoload": {
+    "psr-4": {
+      "Modules\\CMS\\": "modules/CMS/"
+    }
+  }
+}
