@@ -15,17 +15,10 @@
   },
   "autoload": {
     "psr-4": {
-      "Modules\\CMS\\": "src/CMS/"
+      "alonsoggdev\\CMS\\": "src/"
     },
     "files": [
-      "Config/Routes.php"
+      "src/Config/Routes.php"
     ]
-  },
-  "extra": {
-    "codeigniter4": {
-      "discover": [
-        "Modules\\CMS"
-      ]
-    }
   }
 }
