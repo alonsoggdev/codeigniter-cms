@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-        "Modules\\CMS\\": "vendor/alonsoggdev/codeigniter-cms/src/"
+      "Modules\\CMS\\": "src/"
     }
   }
 }
