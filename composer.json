@@ -16,7 +16,10 @@
   "autoload": {
     "psr-4": {
       "Modules\\CMS\\": "src/CMS/"
-    }
+    },
+    "files": [
+      "Config/Routes.php"
+    ]
   },
   "extra": {
     "codeigniter4": {

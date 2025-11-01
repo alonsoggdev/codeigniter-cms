@@ -12,19 +12,3 @@ $routes->group('admin', ['filter' => 'auth'], static function (RouteCollection $
 $routes->get('admin/login', [AuthController::class, 'login']);
 $routes->post('admin/login', [AuthController::class, 'attemptLogin']);
 $routes->get('admin/logout', [AuthController::class, 'logout']);
-
-// Rutas de módulos
-
-$modulesPath = ROOTPATH . 'modules/';
-$modules = scandir($modulesPath);
-
-foreach ($modules as $module) {
-    if ($module === '.' || $module === '..') {
-        continue;
-    }
-
-    $routeFile = $modulesPath . $module . '/Config/Routes.php';
-    if (file_exists($routeFile)) {
-        require $routeFile;
-    }
-}
