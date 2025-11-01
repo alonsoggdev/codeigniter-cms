@@ -2,7 +2,7 @@
 
 namespace Modules\CMS\Config;
 
-use Modules\CMS\Filters\AuthFilter;
+use Modules\CMS\Filters\AdminAuth;
 
 class Registrar
 {
@@ -11,7 +11,7 @@ class Registrar
         return [
             'filters' => [
                 'aliases' => [
-                    'auth' => AuthFilter::class,
+                    'auth' => AdminAuth::class,
                 ],
             ],
         ];
