@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace Modules\CMS\Controllers;
 
-use App\Controllers\BaseController;
-use App\Models\BackUsersModel;
+use CodeIgniter\Controller;
+use Modules\CMS\Models\BackUsersModel;
 
-class Auth extends BaseController
+class Auth extends Controller
 {
     public function login()
     {
