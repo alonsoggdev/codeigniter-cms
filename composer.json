@@ -1,9 +1,28 @@
 {
   "name": "alonsoggdev/codeigniter-cms",
-  "description": "Módulo CMS para CodeIgniter 4",
+  "description": "Módulo CMS para CodeIgniter 4 con login y dashboard",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alonso García",
+      "email": "alonsogg@hotmail.es"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "codeigniter4/framework": "^4.5"
+  },
   "autoload": {
     "psr-4": {
-      "Modules\\CMS\\": "modules/CMS/"
+      "Modules\\CMS\\": "src/CMS/"
+    }
+  },
+  "extra": {
+    "codeigniter4": {
+      "discover": [
+        "Modules\\CMS"
+      ]
     }
   }
 }
