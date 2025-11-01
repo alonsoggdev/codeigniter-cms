@@ -16,9 +16,6 @@
   "autoload": {
     "psr-4": {
       "alonsoggdev\\CMS\\": "src/"
-    },
-    "files": [
-      "src/Config/Routes.php"
-    ]
+    }
   }
 }
