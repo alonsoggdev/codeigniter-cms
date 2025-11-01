@@ -2,8 +2,6 @@
 
 namespace Modules\CMS\Config;
 
-use Modules\CMS\Filters\AdminAuth;
-
 class Registrar
 {
     public static function Modules(): array
@@ -11,7 +9,7 @@ class Registrar
         return [
             'filters' => [
                 'aliases' => [
-                    'auth' => AdminAuth::class,
+                    'auth' => \Modules\CMS\Filters\AdminAuth::class,
                 ],
             ],
         ];
