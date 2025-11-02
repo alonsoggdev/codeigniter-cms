@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\CMS\Controllers;
+namespace Modules\CMS\Filters;
 
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
