@@ -39,7 +39,7 @@ class Auth extends Controller
                 ]);
 
                 
-                $redirect = $session->get('redirect_after_login') ?? '/admin/pages/dashboard';
+                $redirect = $session->get('redirect_after_login') ?? '/admin/dashboard';
                 $session->remove('redirect_after_login');
                 
                 log_message('debug', 'Login correcto para usuario '.$username);
