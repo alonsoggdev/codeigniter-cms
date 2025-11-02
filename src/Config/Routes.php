@@ -13,6 +13,6 @@ $routes->group('admin', ['filter' => 'auth'], static function (RouteCollection $
 
 $routes->group('admin', static function (RouteCollection $routes) {
     $routes->get('login', [Auth::class, 'login']);
-    $routes->post('login', [Auth::class, 'attemptLogin']);
+    $routes->post('login', [Auth::class, 'login']);
     $routes->get('logout', [Auth::class, 'logout']);
 });
