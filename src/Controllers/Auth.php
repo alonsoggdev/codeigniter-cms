@@ -29,12 +29,12 @@ class Auth extends Controller
             log_message('debug', 'Intentando login con usuario: '.$username);
             log_message('debug', 'Usuario encontrado: '.print_r($user, true));
 
-            if ($user && password_verify($password, $user['password_hash'])) {
+            if ($user && password_verify($password, $user->password_hash)) {
                 $session->set([
                     'isAdminLoggedIn' => true,
                     'adminUser' => [
-                        'id' => $user['id'],
-                        'username' => $user['username'],
+                        'id' => $user->id,
+                        'username' => $user->username,
                     ]
                 ]);
 
